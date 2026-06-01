@@ -1,0 +1,27 @@
+{
+  "name": "sv1sjp/geotagphotos",
+  "description": "Add GPS EXIF geolocation tags to photos in Nextcloud",
+  "type": "nextcloud-app",
+  "license": "AGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Dimitris Vagiakakos",
+      "email": "dimitrislinuxos@protonmail.ch",
+      "homepage": "https://www.tuxhouse.eu",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "OCA\\GeotagPhotos\\": "lib/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "8.1"
+    }
+  }
+}

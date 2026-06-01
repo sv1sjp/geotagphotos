@@ -1,0 +1,30 @@
+{
+  "name": "geotagphotos",
+  "version": "1.0.0",
+  "description": "Add GPS EXIF geolocation tags to photos in Nextcloud",
+  "keywords": ["nextcloud", "gps", "location", "geotag", "maps"],
+  "homepage": "https://www.tuxhouse.eu",
+  "license": "AGPL-3.0-or-later",
+  "author": {
+    "name": "Dimitris Vagiakakos",
+    "email": "dimitrislinuxos@protonmail.ch",
+    "url": "https://www.tuxhouse.eu"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack --node-env production --progress",
+    "dev":   "NODE_ENV=development webpack --node-env development --progress",
+    "watch": "NODE_ENV=development webpack --node-env development --progress --watch"
+  },
+  "dependencies": {
+    "@nextcloud/axios": "^2.5.0",
+    "@nextcloud/files": "^4.0.0",
+    "@nextcloud/l10n":  "^3.1.0",
+    "@nextcloud/router": "^3.0.1",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@nextcloud/webpack-vue-config": "^6.1.1",
+    "typescript": "^5.7.2",
+    "vue-loader": "^17.4.2"
+  }
+}

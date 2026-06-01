@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>geotagphotos</id>
+    <name>GeoTag Photos</name>
+    <summary>Add GPS geolocation tags to your photos</summary>
+    <description><![CDATA[
+Add GPS EXIF metadata to JPEG photos directly from the Nextcloud Files app.
+Once tagged, photos will appear in Nextcloud Maps and Memories after a metadata rescan (`occ maps:scan-photos`).
+
+Features:
+- Add or replace GPS coordinates (latitude, longitude, optional altitude) on JPEG photos with one click
+- Read and display existing GPS coordinates before overwriting
+- Clear GPS data from a photo
+- Tag multiple photos with the same coordinates in one action
+- Uses exiftool for reliable, standards-compliant EXIF manipulation
+- Only modifies GPS-related EXIF fields — all other metadata is preserved
+
+Creator: Dimitris Vagiakakos (@sv1sjp) — https://www.tuxhouse.eu
+    ]]></description>
+    <version>1.0.7</version>
+    <licence>AGPL-3.0-or-later</licence>
+    <author mail="dimitrislinuxos@protonmail.ch" homepage="https://www.tuxhouse.eu">Dimitris Vagiakakos (@sv1sjp)</author>
+    <namespace>GeotagPhotos</namespace>
+    <category>multimedia</category>
+    <bugs>https://github.com/sv1sjp/geotagphotos/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="33" max-version="99"/>
+        <php min-version="8.1"/>
+    </dependencies>
+</info>
