@@ -4,9 +4,9 @@
 
 > Add GPS coordinates to your JPEG photos directly from the Nextcloud Files app.
 
-**GeoTag Photos** lets you write GPS EXIF metadata into JPEG files so they appear on the map in [Nextcloud Maps](https://apps.nextcloud.com/apps/maps) and [Nextcloud Memories](https://apps.nextcloud.com/apps/memories) after a metadata rescan — no desktop software needed!
+**GeoTag Photos** lets you write GPS EXIF metadata into JPEG files so they appear on the map in [Nextcloud Maps](https://apps.nextcloud.com/apps/maps) and [Nextcloud Memories](https://apps.nextcloud.com/apps/memories) after a metadata rescan- no desktop software needed!
 
-**Author:** Dimitris Vagiakakos ([@sv1sjp](https://github.com/sv1sjp)) — [tuxhouse.eu](https://www.tuxhouse.eu)  
+**Author:** Dimitris Vagiakakos ([@sv1sjp](https://github.com/sv1sjp))- [tuxhouse.eu](https://www.tuxhouse.eu)  
 **License:** GNU AGPL v3 or later  
 **Nextcloud:** 33  
 
@@ -14,12 +14,12 @@
 
 ## Features
 
-- **Add / Replace GPS** — write latitude, longitude, and optional altitude to any JPEG
-- **Read before overwrite** — existing coordinates are shown in the dialog before you change them
-- **Clear GPS** — remove all GPS EXIF tags from a photo in one click
-- **Batch tagging** — select multiple JPEGs and apply the same coordinates to all at once
-- **Paste from Clipboard** — paste coordinates directly from Google Maps or any GPS app; supports decimal degrees (`38.083454, 23.697252`) and DMS (`38°05'21.1"N 23°42'42.0"E`)
-- **Safe EXIF writes** — only GPS tags are touched; `DateTimeOriginal`, orientation, camera fields, and all other metadata are never modified
+- **Add / Replace GPS**- write latitude, longitude, and optional altitude to any JPEG
+- **Read before overwrite**- existing coordinates are shown in the dialog before you change them
+- **Clear GPS**- remove all GPS EXIF tags from a photo in one click
+- **Batch tagging**- select multiple JPEGs and apply the same coordinates to all at once
+- **Paste from Clipboard**- paste coordinates directly from Google Maps or any GPS app; supports decimal degrees (`38.083454, 23.697252`) and DMS (`38°05'21.1"N 23°42'42.0"E`)
+- **Safe EXIF writes**- only GPS tags are touched; `DateTimeOriginal`, orientation, camera fields, and all other metadata are never modified
 
 ![GeoTag Photos demo](img/demo.gif)
 
@@ -115,7 +115,7 @@ Extra text or blank lines in the clipboard (e.g. when copying from Google Maps) 
 
 ## GPS coordinate format
 
-The app uses **decimal degrees (DD)** — the same format used by Google Maps.
+The app uses **decimal degrees (DD)**- the same format used by Google Maps.
 
 | Direction | Sign | Example |
 |---|---|---|
@@ -130,7 +130,7 @@ Altitude is in **metres**, positive above sea level and negative below.
 
 ## EXIF tags written
 
-Only these tags are written — nothing else is touched:
+Only these tags are written- nothing else is touched:
 
 | Tag | Description |
 |---|---|
@@ -145,11 +145,11 @@ Only these tags are written — nothing else is touched:
 
 ## Security
 
-- **Authentication** — all API routes require a logged-in user (`@NoAdminRequired`).
-- **Authorisation** — files are resolved through `IRootFolder→getUserFolder()`, so users can only tag files they own or have write access to.
-- **MIME guard** — non-JPEG files are rejected at the PHP layer even if the frontend filter is bypassed.
-- **Command injection** — `ExifService` calls exiftool via `proc_open` with an **array** command (no shell string), making injection structurally impossible.
-- **Path traversal** — file paths are resolved through Nextcloud's storage layer and verified with `realpath()` before being passed to exiftool.
+- **Authentication**- all API routes require a logged-in user (`@NoAdminRequired`).
+- **Authorisation**- files are resolved through `IRootFolder→getUserFolder()`, so users can only tag files they own or have write access to.
+- **MIME guard**- non-JPEG files are rejected at the PHP layer even if the frontend filter is bypassed.
+- **Command injection**- `ExifService` calls exiftool via `proc_open` with an **array** command (no shell string), making injection structurally impossible.
+- **Path traversal**- file paths are resolved through Nextcloud's storage layer and verified with `realpath()` before being passed to exiftool.
 
 ---
 
@@ -161,7 +161,7 @@ geotagphotos/
 │   ├── info.xml              App metadata and NC version constraints
 │   └── routes.php            REST API route table
 ├── lib/
-│   ├── AppInfo/Application.php   Bootstrap — injects JS into Files
+│   ├── AppInfo/Application.php   Bootstrap- injects JS into Files
 │   ├── Controller/GeotagController.php  GET / POST / DELETE endpoints
 │   └── Service/ExifService.php   exiftool wrapper
 ├── src/
@@ -184,7 +184,7 @@ geotagphotos/
 ## Troubleshooting
 
 **"exiftool is not installed"**
-Install exiftool on the web server — see [Requirements](#requirements). If using a container, install it inside the container image.
+Install exiftool on the web server- see [Requirements](#requirements). If using a container, install it inside the container image.
 
 **"Only local storage is supported"**
 External storage (S3, WebDAV, SFTP, etc.) is not supported. The photo must be on the Nextcloud server's local disk.
