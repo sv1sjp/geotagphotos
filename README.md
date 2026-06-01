@@ -14,12 +14,12 @@
 
 ## Features
 
-- **Add / Replace GPS**- write latitude, longitude, and optional altitude to any JPEG
-- **Read before overwrite**- existing coordinates are shown in the dialog before you change them
-- **Clear GPS**- remove all GPS EXIF tags from a photo in one click
-- **Batch tagging**- select multiple JPEGs and apply the same coordinates to all at once
-- **Paste from Clipboard**- paste coordinates directly from Google Maps or any GPS app; supports decimal degrees (`38.083454, 23.697252`) and DMS (`38°05'21.1"N 23°42'42.0"E`)
-- **Safe EXIF writes**- only GPS tags are touched; `DateTimeOriginal`, orientation, camera fields, and all other metadata are never modified
+- **Add / Replace GPS** - write latitude, longitude, and optional altitude to any JPEG
+- **Read before overwrite** - existing coordinates are shown in the dialog before you change them
+- **Clear GPS** - remove all GPS EXIF tags from a photo in one click
+- **Batch tagging** - select multiple JPEGs and apply the same coordinates to all at once
+- **Paste from Clipboard** - paste coordinates directly from Google Maps or any GPS app; supports decimal degrees (`38.083454, 23.697252`) and DMS (`38°05'21.1"N 23°42'42.0"E`)
+- **Safe EXIF writes** - only GPS tags are touched; `DateTimeOriginal`, orientation, camera fields, and all other metadata are never modified
 
 ![GeoTag Photos demo](img/demo.gif)
 
