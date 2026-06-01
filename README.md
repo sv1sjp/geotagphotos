@@ -1,3 +1,5 @@
+<img src="img/app.svg" width="64" height="64" align="left" style="margin-right:12px" alt="GeoTag Photos icon">
+
 # GeoTag Photos
 
 > Add GPS coordinates to your JPEG photos directly from the Nextcloud Files app.
